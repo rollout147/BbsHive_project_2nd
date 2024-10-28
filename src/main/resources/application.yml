@@ -1,0 +1,57 @@
+server:
+  port: 8888
+# Oracle Connect
+spring:
+  # File Size
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+      
+  devtools:
+    livereload:
+      enabled: true
+
+
+  datasource:
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521/xe
+    username: scott
+    password: tiger
+
+  # Jpa Setting
+  jpa:
+    show-sql: true 
+    hibernate:
+      ddl-auto: update
+      
+  # View Resolver
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp 
+  
+  # gmail Transfer
+  mail:
+   host: smtp.gmail.com
+   port: 587
+   username: yujinho75@gmail.com
+   password: 
+   properties:
+    mail:
+     smtp:
+      auth: true
+      starttls.enable: true    
+      
+      
+      
+      
+      
+# Mybatis
+mybatis:
+  config-location: classpath:configuration.xml
+  mapper-locations: classpath:mappers/*.xml       
+  
+  
+
+
