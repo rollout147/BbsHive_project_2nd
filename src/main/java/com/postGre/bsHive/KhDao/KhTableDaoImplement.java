@@ -1,4 +1,4 @@
-package com.postGre.bsHive.dao.kh;
+package com.postGre.bsHive.KhDao;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
-import com.postGre.bsHive.dto.Paper;
+import com.postGre.bsHive.ADto.Paper;
 
 import lombok.RequiredArgsConstructor;
 

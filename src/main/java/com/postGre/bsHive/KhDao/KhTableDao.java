@@ -1,8 +1,8 @@
-package com.postGre.bsHive.dao.kh;
+package com.postGre.bsHive.KhDao;
 
 import java.util.List;
 
-import com.postGre.bsHive.dto.Paper;
+import com.postGre.bsHive.ADto.Paper;
 
 public interface KhTableDao {
 
