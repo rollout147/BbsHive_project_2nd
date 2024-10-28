@@ -60,6 +60,10 @@ spring:
           starttls:
             enable: true
 
+  # jsp 수정시 자동 F5
+  devtools:
+    livereload:
+      enabled: true
 #MyBatis
 mybatis:
   config-location: classpath:configuration.xml
