@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<settings>
+		<setting name="jdbcTypeForNull" value="VARCHAR"/>
+	</settings>
+
+	<typeAliases>
+<<<<<<< HEAD
+		<typeAlias alias="Paper" type="com.postGre.bsHive.ADto.Paper" />
+=======
+>>>>>>> fa4507ab9f1cff0930a09af2c50565dde9beb340
+	</typeAliases>
+</configuration> 
