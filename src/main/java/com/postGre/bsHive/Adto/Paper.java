@@ -1,4 +1,4 @@
-package com.postGre.bsHive.ADto;
+package com.postGre.bsHive.Adto;
 
 import lombok.Data;
 
