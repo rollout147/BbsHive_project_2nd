@@ -1,4 +1,4 @@
-package com.postGre.bsHive.configuration;
+package com.postGre.bsHive.Configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

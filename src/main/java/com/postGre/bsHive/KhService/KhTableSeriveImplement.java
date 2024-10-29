@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.postGre.bsHive.ADto.Paper;
+import com.postGre.bsHive.Adto.Paper;
 import com.postGre.bsHive.KhDao.KhTableDao;
 
 import lombok.RequiredArgsConstructor;
