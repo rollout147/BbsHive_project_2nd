@@ -31,4 +31,6 @@
 		<typeAlias alias="Test_Submit"				type="com.postGre.bsHive.Amodel.Test_Submit"/>
 		<typeAlias alias="Test"						type="com.postGre.bsHive.Amodel.Test"/>
 	</typeAliases>
+	
+	
 </configuration> 

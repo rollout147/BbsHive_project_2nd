@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 server:
   port: 8888
 # Oracle Connect
@@ -43,9 +42,6 @@ spring:
      smtp:
       auth: true
       starttls.enable: true    
-      
-      
-      
       
       
 # Mybatis
