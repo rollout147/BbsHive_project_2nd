@@ -9,6 +9,6 @@
 	</settings>
 
 	<typeAliases>
-		<typeAlias alias="Paper" type="com.postGre.bsHive.dto.Paper" />
+		<typeAlias alias="Paper" type="com.postGre.bsHive.ADto.Paper" />
 	</typeAliases>
 </configuration> 

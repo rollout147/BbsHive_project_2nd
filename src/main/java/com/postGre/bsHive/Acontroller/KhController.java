@@ -9,7 +9,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.postGre.bsHive.ADto.Paper;
+import com.postGre.bsHive.Adto.Paper;
 import com.postGre.bsHive.KhService.KhTableSerive;
 
 
