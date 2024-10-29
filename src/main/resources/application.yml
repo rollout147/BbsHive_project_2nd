@@ -60,6 +60,7 @@ spring:
           starttls:
             enable: true
             
+  # jsp 수정시 자동 F5
   devtools:
     livereload:
       enabled: true
@@ -77,3 +78,6 @@ logging:
       hibernate:
         SQL: debug 
       
+youtube:
+  api:
+    key: ${YOUTUBE_API_KEY}   
