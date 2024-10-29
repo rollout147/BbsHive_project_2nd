@@ -3,6 +3,7 @@ package com.postGre.bsHive.AModel;
 import lombok.Data;
 
 //과제 TBL
+
 @Data
 public class Asmt {
 	private String  cycl;		//차수 (과제제출 TBL과 조인)

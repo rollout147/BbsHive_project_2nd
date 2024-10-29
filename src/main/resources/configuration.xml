@@ -7,11 +7,4 @@
 	<settings>
 		<setting name="jdbcTypeForNull" value="VARCHAR"/>
 	</settings>
-
-	<typeAliases>
-<<<<<<< HEAD
-=======
-		<typeAlias alias="Paper" type="com.postGre.bsHive.ADto.Paper" />
->>>>>>> 662a3f0c6cfc7340e4e46f0613934bc74eae5b75
-	</typeAliases>
 </configuration> 
