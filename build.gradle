@@ -1,5 +1,13 @@
 plugins {
 	id 'java'
+<<<<<<< HEAD
+	id 'org.springframework.boot' version '3.3.2'
+	id 'io.spring.dependency-management' version '1.1.6'
+}
+
+group = 'com.oracle'
+version = 'version1.0'
+=======
 	id 'war'
 	id 'org.springframework.boot' version '3.3.5'
 	id 'io.spring.dependency-management' version '1.1.6'
@@ -7,6 +15,7 @@ plugins {
 
 group = 'com.postGre'
 version = '0.0.1-SNAPSHOT'
+>>>>>>> develop
 
 java {
 	toolchain {
@@ -30,6 +39,19 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-mail'
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
+<<<<<<< HEAD
+	
+	implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
+    implementation group: 'org.glassfish.web', name: 'jakarta.servlet.jsp.jstl', version: '2.0.0'
+    implementation 'com.googlecode.json-simple:json-simple:1.1.1'
+	
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-websocket'
+	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.3'
+	compileOnly 'org.projectlombok:lombok'
+	runtimeOnly 'com.oracle.database.jdbc:ojdbc11'
+	annotationProcessor 'org.projectlombok:lombok'
+=======
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-websocket'
 	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.3'
@@ -45,12 +67,21 @@ dependencies {
 	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
 	annotationProcessor 'org.projectlombok:lombok'
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+>>>>>>> develop
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter-test:3.0.3'
 	testImplementation 'org.springframework.security:spring-security-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+<<<<<<< HEAD
+
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
 }
 
+
+=======
+}
+
+>>>>>>> develop
 tasks.named('test') {
 	useJUnitPlatform()
 }
