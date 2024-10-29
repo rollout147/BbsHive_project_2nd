@@ -11,14 +11,14 @@ spring:
 
   file:
     upload:
-      path: C:\Users\admin\Desktop\project\jmAuto\src\main\resources\static\images\
+      path: C:/bs_hive/bsHive/src/main/resources/static
         
         
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/bsHive
-    username: scott
-    password: tiger
+    url: jdbc:postgresql://localhost:5432/bs_Hive
+    username: postgres
+    password: postgre
     
   #datasource:
   #  driver-class-name: oracle.jdbc.OracleDriver
@@ -72,4 +72,8 @@ logging:
     org:
       hibernate:
         SQL: debug 
+ 
+  devtools:
+    livereload:
+      enabled: true
       
