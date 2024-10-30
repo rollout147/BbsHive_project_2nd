@@ -5,12 +5,12 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 
-<link href="<%=request.getContextPath()%>/css/main.css" rel="stylesheet" type="text/css">
+
 <html>
 <head>
 <meta charset="UTF-8">
+<link href="<%=request.getContextPath()%>/css/main.css" rel="stylesheet" type="text/css">
 <title>Insert title here</title>
-<<<<<<< HEAD
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
@@ -90,10 +90,13 @@ document.addEventListener("DOMContentLoaded", function() {
 		    			<td class="main_gogi_table_td2">날짜</td>
 		    			<td class="main_gogi_table_img">첨부파일유무</td>
 		    		</tr>
+		    		
+		    		
+		    		
 		    	</table>
 		    	<div class="main_but_img">
-		    		<a href=""><img alt="증명서발급" src=""><div class="main_but_img_text">증명서발급</div></a>
-		    		<a href=""><img alt="수료증발급" src=""><div class="main_but_img_text">수료증발급</div></a>
+		    		<a href="/kh/admin/prdocList"><img alt="수료증발급" src=""><div class="main_but_img_text">수료증발급</div></a>
+		    		<a href="/kh/admin/scholarshipList"><img alt="장학증명서발급" src=""><div class="main_but_img_text">장학증명서발급</div></a>
 		    		<a href=""><img alt="1:1상담" src=""><div class="main_but_img_text">1:1 상담</div></a>
 		    		<a href=""><img alt="1:1상담" src=""><div class="main_but_img_text">1:1 상담</div></a>
 		    	</div>

@@ -15,11 +15,8 @@ public class SeController {
 	
 	private final SeService ss;
 	
-	/*
-	 * @GetMapping(value = "/") public String all() {
-	 * 
-	 * return "se/OnlnForm"; }
-	 */
-	
+	@GetMapping(value = "/main") public String all() {
+	 
+	return "se/OnlnForm"; }	
 	
 }

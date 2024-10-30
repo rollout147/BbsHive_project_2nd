@@ -11,7 +11,13 @@
 <link rel="stylesheet" type="text/css" href="/css/docs.css" />
 <link rel="stylesheet" type="text/css" href="/css/dist/tui-tree.css" />
 </head>
-
+<script type="text/javascript">
+	$(function() {
+		$("#tui-tree-node-4").click(function() {
+			alert("ok?");
+			});
+	});
+</script>
     <body>
         <div class="code-html">
             <div id="tree" class="tui-tree-wrap"></div>
@@ -19,43 +25,28 @@
         <script src="/css/dist/tui-tree.js"></script>
         <script class="code-js">
 
-        var util = {
-            addEventListener: function(element, eventName, handler) {
-                if (element.addEventListener) {
-                    element.addEventListener(eventName, handler, false);
-                } else {
-                    element.attachEvent('on' + eventName, handler);
-                }
-            }
-        };
-
         var data = [
-            {text: 'rootA', children: [
-                {text: 'sub-A1'},
-                {text: 'sub-A2'},
-                {text: 'sub-A3'},
-                {text: 'sub-A4'},
-                {text: 'sub-A5', state: 'closed', children: [
-                    {text:'sub-A5A', children:[
-                        {text:'sub-A5A1'}
-                    ]},
-                    {text:'sub_A5B'}
-                ]},
-                {text: 'sub-A6'},
-                {text: 'sub-A7'},
-                {text: 'sub-A8'},
-                {text: 'sub-A9', state: 'closed', children: [
-                    {text:'sub-A9A'},
-                    {text:'sub-A9B'}
-                ]},
-                {text: 'sub-A10'},
-                {text: 'sub-A11'},
-                {text: 'sub-A12'}
+            {text: '인원관리', children: [
+                {text: '학생관리'},
+                {text: '교수관리'},
+                {text: '직원관리'}
             ]},
-            {text: 'rootB', state:'closed', children: [
-                {text:'sub-B1'},
-                {text:'sub-B2'},
-                {text:'sub-B3'}
+            {text: '학사관리', state:'closed', children: [
+            	{text: '강의관리', state: 'closed', children: [
+                    {text:'오프라인강의개설승인'},
+                    {text:'온라인강의개설승인'},
+                    {text:'강의실관리'},
+                    {text:'성적입력'}
+                ]},
+                {text: '수료관리', state: 'closed', children: [
+                    {text:'장학금'},
+                    {text:'재증명'}
+                ]}
+            ]},
+            {text: '게시판관리', state:'closed', children: [
+            	{text:'공지사항게시판'},
+                {text:'1:1문의게시판'},
+                {text:'FAQ'}
             ]}
         ];
 
