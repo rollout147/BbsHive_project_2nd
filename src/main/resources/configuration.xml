@@ -32,5 +32,7 @@
 		<typeAlias alias="Test_Qitem"				type="com.postGre.bsHive.Amodel.Test_Qitem"/>
 		<typeAlias alias="Test_Submit"				type="com.postGre.bsHive.Amodel.Test_Submit"/>
 		<typeAlias alias="Test"						type="com.postGre.bsHive.Amodel.Test"/>
+		<typeAlias alias="Kh_PrdocList" 			type="com.postGre.bsHive.Adto.Kh_PrdocList"/>
+		<typeAlias alias="Kh_ScholarshipList"		type="com.postGre.bsHive.Adto.Kh_ScholarshipList"/>
 	</typeAliases>
 </configuration> 
