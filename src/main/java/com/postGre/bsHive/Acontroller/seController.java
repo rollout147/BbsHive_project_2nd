@@ -10,15 +10,16 @@ import lombok.RequiredArgsConstructor;
 
 @Controller
 @RequiredArgsConstructor
-@RequestMapping(value="/se")
-public class seController {
+@RequestMapping
+public class SeController {
 	
 	private final SeService ss;
 	
-	@GetMapping(value = "/onln_form")
-	public String all() {
-		
-		return "se/onln_form";
-	}
+	/*
+	 * @GetMapping(value = "/") public String all() {
+	 * 
+	 * return "se/OnlnForm"; }
+	 */
+	
 	
 }
