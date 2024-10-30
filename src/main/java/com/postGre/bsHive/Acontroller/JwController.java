@@ -1,12 +1,5 @@
 package com.postGre.bsHive.Acontroller;
 
-<<<<<<< HEAD
-public class JwController {
-
-	public JwController() {
-		// TODO Auto-generated constructor stub
-	}
-=======
 import java.util.List;
 
 import org.springframework.stereotype.Controller;
@@ -42,6 +35,5 @@ public class JwController {
 		return "jw/lctr_Info";
 	}
 	
->>>>>>> 1a484729168f7c0adeb2023851fd02354f4d73a2
 
 }

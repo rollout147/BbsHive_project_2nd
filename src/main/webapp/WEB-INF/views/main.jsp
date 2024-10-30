@@ -1,15 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<<<<<<< HEAD
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 
-=======
 <link href="<%=request.getContextPath()%>/css/main.css" rel="stylesheet" type="text/css">
-<!DOCTYPE html>
->>>>>>> 1a484729168f7c0adeb2023851fd02354f4d73a2
 <html>
 <head>
 <meta charset="UTF-8">
@@ -41,7 +37,6 @@
 </body>
 </html>
 
-=======
 </head>
 <header>
 	<%@ include file="header.jsp" %>
@@ -143,4 +138,3 @@ document.addEventListener("DOMContentLoaded", function() {
 	<%@ include file="footer.jsp" %>
 </footer>
 </html>
->>>>>>> 1a484729168f7c0adeb2023851fd02354f4d73a2

@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-package com.postGre.bsHive.Amodel;
-
-import lombok.Data;
-
-@Data
-public class Ofl_Lctr {
-	// 오프라인 강의
-	private int lctr_num;		// 강의번호
-	private String lctr_expln;	// 강의설명
-	private String bgng_ymd;	// 시작일
-	private String end_ymd;		// 종료일
-	private int rcrt_nope;		// 모집정원 
-	private int fnsh_cost;		// 수강료
-	private String fnsh_crtr;	// 수료기준
-	private String lctr_date;	// 개설일자
-}
-=======
 package com.postGre.bsHive.Amodel;
 
 import lombok.Data;
@@ -33,4 +15,3 @@ public class Ofl_Lctr {
 	private String 	fnsh_crtr;	// 수료기준
 	private String 	lctr_date;	// 개설일자
 }
->>>>>>> 1a484729168f7c0adeb2023851fd02354f4d73a2
