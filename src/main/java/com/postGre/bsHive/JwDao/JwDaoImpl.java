@@ -5,7 +5,7 @@ import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
-import com.postGre.bsHive.Adto.All_Lctr;
+import com.postGre.bsHive.Adto.Onln_Lctr_List;
 
 import lombok.RequiredArgsConstructor;
 
@@ -16,8 +16,8 @@ public class JwDaoImpl implements JwDao {
 
 	// 온라인 강의정보 불러오기 
 	@Override
-	public List<All_Lctr> listAllLctr(All_Lctr al) {
-		List<All_Lctr> listResult = null;
+	public List<Onln_Lctr_List> listAllLctr(Onln_Lctr_List al) {
+		List<Onln_Lctr_List> listResult = null;
 		System.out.println("JwDaoImpl listAllLctr Start...");
 		
 		try {

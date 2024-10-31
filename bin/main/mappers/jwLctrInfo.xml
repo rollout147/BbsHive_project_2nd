@@ -4,7 +4,7 @@
  
  <mapper namespace="com.postGre.bsHive.All_LctrMapper.jw">
  
- 	<select id="selectAllLctr" parameterType="All_Lctr" resultType="All_Lctr">
+ 	<!-- <select id="selectAllLctr" parameterType="All_Lctr" resultType="All_Lctr">
  		SELECT o."LCTR_NUM"
  			 , l."LCTR_NAME"
  			 , o."BGNG_YMD"
@@ -13,7 +13,7 @@
  			 , l."PSCP_NOPE"
  		FROM "ONLN_LCTR" o
  		LEFT OUTER JOIN "LCTR" l on o."LCTR_NUM" = l."LCTR_NUM"
- 	</select>
+ 	</select> -->
  
  
  

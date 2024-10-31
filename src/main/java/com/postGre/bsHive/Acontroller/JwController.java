@@ -6,7 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.postGre.bsHive.Adto.All_Lctr;
+import com.postGre.bsHive.Adto.Onln_Lctr_List;
 import com.postGre.bsHive.JwService.JwService;
 
 import jakarta.servlet.http.HttpSession;
@@ -21,12 +21,12 @@ public class JwController {
 	
 	// 온라인 강의정보 불러오기 
 	@GetMapping(value = "/jw/")
-	public String OnlnLctrInfo(All_Lctr al,
+	public String OnlnLctrInfo(Onln_Lctr_List al,
 							   //HttpSession session,
 							   Model model) {
 		System.out.println("JwController OnlnLctrInfo Start...");
 		
-		List<All_Lctr> listOnlnLct = js.listOnlnLct(al);
+		List<Onln_Lctr_List> listOnlnLct = js.listOnlnLct(al);
 		System.out.println("JwController OnlnLctrInfo listOnlnLct.size->"+listOnlnLct.size());
 		
 		model.addAttribute("listOnlnLct", listOnlnLct);

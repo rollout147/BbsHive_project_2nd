@@ -33,7 +33,7 @@
 		<typeAlias alias="Test_Submit"				type="com.postGre.bsHive.Amodel.Test_Submit"/>
 		<typeAlias alias="Test"						type="com.postGre.bsHive.Amodel.Test"/>
 		
-		<typeAlias alias="All_Lctr" 				type="com.postGre.bsHive.Adto.All_Lctr"/>
+		<typeAlias alias="Onln_Lctr_List" 			type="com.postGre.bsHive.Adto.Onln_Lctr_List"/>
 		<typeAlias alias="Kh_PrdocList" 			type="com.postGre.bsHive.Adto.Kh_PrdocList"/>
 		<typeAlias alias="Kh_ScholarshipList"		type="com.postGre.bsHive.Adto.Kh_ScholarshipList"/>
 	</typeAliases>
