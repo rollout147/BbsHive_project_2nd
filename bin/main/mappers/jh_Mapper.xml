@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+ <mapper namespace="com.postGre.bsHive.jh_Mapper">
+ 
+	<select id="login" resultType="user_table" parameterType="user_table">
+		select *
+		FROM "LGN"
+		where "EML" =#{eml}
+		AND "PSWD" =#{pswd}
+		AND "MBR_SE" =#{mbr_se}
+		
+	</select>
+	
+
+
+	 <select id="myClass" parameterType="int" resultType="Lctr_Aply">	
+ 		SELECT * FROM "LCTR_APLY"
+		where "UNQ_NUM" =#{unq_num}
+
+ 	</select>
+	
+	
+	
+</mapper> 
