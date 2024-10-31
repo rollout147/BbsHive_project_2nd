@@ -3,13 +3,105 @@
  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
  
  <mapper namespace="com.postGre.bsHive.kh_TableMapper">
- 	<select id="getPaperTableList" 		resultType="Kh_PrdocList">
+ 	<select id="getPrdocList" 		parameterType="Kh_PrdocList" 	resultType="Kh_PrdocList">
 		SELECT * 
-		FROM public."PRDOC"
+		FROM (
+				SELECT (ROW_NUMBER() OVER()) AS rn, prdocAll.*
+				FROM (
+						SELECT *
+						FROM public."PRDOC"
+						<where> 					
+							<if test="keyword !=null">
+							${search} LIKE '%'||#{keyword}||'%'
+							</if>
+						</where>
+						ORDER BY "APLY_NUM"
+					 ) prdocAll
+		     )
+		
+		WHERE rn 
+    		BETWEEN #{start} AND #{end}
 	</select>
 	
+	<select id="getTotPrdocList" 	parameterType="Kh_PrdocList" 	resultType="int">
+		SELECT COUNT(*) 
+		FROM public."PRDOC"
+		<where> 					
+			<if test="keyword !=null">
+			${search} LIKE '%'||#{keyword}||'%'
+			</if>
+		</where>
+	</select>
+	
+	
+	
+	
+
+	
+	<select id="getTotStdntList" 	parameterType="Kh_StdntList" 	resultType="int">
+		SELECT COUNT(*) 
+		FROM (	SELECT 	s."UNQ_NUM",
+						s."STDNT_NM",
+						s."STDNT_TELNO",
+						s."STDNT_ADDR",
+						s."STDNT_DADDR",
+						s."STDNT_ZIP",
+						l."EML"
+				FROM public."STDNT" s
+					LEFT OUTER JOIN public."LGN" l
+					ON s."UNQ_NUM" = l."UNQ_NUM"
+					WHERE l."DEL_YN" = '0'
+					<where> 					
+						<if test="keyword !=null">
+							${search} LIKE '%'||#{keyword}||'%'
+						</if>
+					</where>
+					ORDER BY "UNQ_NUM"
+				) 
+
+	</select>
+	
+	
+	<select id="getStdntList" 		parameterType="Kh_StdntList" 	resultType="Kh_StdntList">
+		SELECT * 
+		FROM (
+				SELECT (ROW_NUMBER() OVER()) AS rn, stdntAll.*
+				FROM (	SELECT 	s."UNQ_NUM",
+								s."STDNT_NM",
+								s."STDNT_TELNO",
+								s."STDNT_ADDR",
+								s."STDNT_DADDR",
+								s."STDNT_ZIP",
+								l."EML"
+						FROM public."STDNT" s
+						LEFT OUTER JOIN public."LGN" l
+							ON s."UNQ_NUM" = l."UNQ_NUM"
+							WHERE l."DEL_YN" = '0'
+						<where> 					
+							<if test="keyword !=null">
+							${search} LIKE '%'||#{keyword}||'%'
+							</if>
+						</where>
+						ORDER BY "UNQ_NUM"
+					 ) stdntAll
+		     )
+		
+		WHERE rn 
+    		BETWEEN #{start} AND #{end}
+	</select>
+	
+	
+	<update id="updateLgnDelYn"			parameterType="Kh_StdntList">
+		UPDATE public."LGN"
+			SET	"DEL_YN" = '1'
+			WHERE "EML" = #{eml}
+	</update>
+	
+	
+	
+	
 <!-- 	
-	<select id="getTotPaymentByCon" 		parameterType="PayList"		resultType="int">
+	<select id="getTotTfListByCon" 			parameterType="TransferList" resultType="int">
 		SELECT COUNT(*) 
 		FROM payment
 		<where> 					

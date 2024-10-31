@@ -95,8 +95,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		    		
 		    	</table>
 		    	<div class="main_but_img">
-		    		<a href="/kh/admin/prdocList"><img alt="수료증발급" src=""><div class="main_but_img_text">수료증발급</div></a>
-		    		<a href="/kh/admin/scholarshipList"><img alt="장학증명서발급" src=""><div class="main_but_img_text">장학증명서발급</div></a>
+		    		<a href="/kh/admin/prdocList?currentPage=1"><img alt="수료증발급" src=""><div class="main_but_img_text">수료증발급</div></a>
+		    		<a href="/kh/admin/adminMain"><img alt="장학증명서발급" src=""><div class="main_but_img_text">장학증명서발급</div></a>
 		    		<a href=""><img alt="1:1상담" src=""><div class="main_but_img_text">1:1 상담</div></a>
 		    		<a href=""><img alt="1:1상담" src=""><div class="main_but_img_text">1:1 상담</div></a>
 		    	</div>
