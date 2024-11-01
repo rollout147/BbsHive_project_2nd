@@ -38,6 +38,7 @@
 		<typeAlias alias="Kh_ScholarshipList"		type="com.postGre.bsHive.Adto.Kh_ScholarshipList"/>
 		<typeAlias alias="Kh_StdntList"				type="com.postGre.bsHive.Adto.Kh_StdntList"/>
 		<typeAlias alias="Kh_EmpList"				type="com.postGre.bsHive.Adto.Kh_EmpList"/>
+		<typeAlias alias="Kh_LctrList"				type="com.postGre.bsHive.Adto.Kh_LctrList"/>
 		
 		
 	</typeAliases>
