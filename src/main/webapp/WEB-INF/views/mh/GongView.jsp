@@ -1,8 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@include file="../header.jsp" %>
+<%@ include file="sidebarPst.jsp"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,33 +10,27 @@
 </head>
 <body>
     공지사항 내용
-    <form action="modify" method="post">
         <table border="1">
         <c:forEach items="${GongView }" var="board">
             <tr>
                 <td>제목</td>
-                <td><input type="text" name="bTitle" value="${board.pst_ttl }" readonly></td>
+                <td><input type="text" name="pst_ttl" value="${board.pst_ttl }" readonly></td>
             </tr>
             <tr>
                 <td>작성일</td>
-                <td><input type="text" name="bDate" value="${board.wrt_ymd }" readonly></td>
+                <td><input type="text" name="wrt_ymd" value="${board.wrt_ymd }" readonly></td>
             </tr>
             <tr>
                 <td>내용</td>
-                <td><textarea rows="10" name="bContent" readonly>${board.pst_cn }</textarea></td>
+                <td><textarea rows="10" name="pst_cn" readonly>${board.pst_cn }</textarea></td>
             </tr>
-
-            <tr>
-                <td colspan="2">
-                    <input type="submit" value="수정">
-                    &nbsp;&nbsp; 
-                    <a href="mhboard_GongList">목록보기</a>&nbsp;&nbsp; 
-                    <a href="GongDelete?pst_num=${board.pst_num }">삭제</a>&nbsp;&nbsp;
-                </td>
-            </tr>
-                        </c:forEach>
+             </c:forEach>
         </table>
-    </form>
-    <a href="Gongwrite">글작성</a>
+        <c:forEach items="${GongView }" var="board">
+        <button onclick="location.href='/mh/gongModify?pst_num=${board.pst_num}'">수정</button>
+        <a href="gongList">목록보기</a>
+        <a href="gongDelete?pst_num=${board.pst_num }" class="delete">삭제</a>
+    </c:forEach>
+
 </body>
 </html>

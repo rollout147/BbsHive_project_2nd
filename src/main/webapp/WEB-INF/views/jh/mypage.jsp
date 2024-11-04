@@ -1,81 +1,76 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
-<%@ include file="jh_jstl.jsp" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ include file="jstl.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
 
-<link rel="stylesheet" type="text/css" href="/css/jh_mypage.css">
+<link rel="stylesheet" type="text/css" href="/css/jh_myPage.css">
 
 </head>
+<header>
+	<%@ include file="../header.jsp" %>
+</header>
 <body>
 
-<header class="header">
-    <h1>Çì´õ</h1>
-</header>
+
 
 <div class="body">
-    <div class="title">¸¶ÀÌÆäÀÌÁö</div> <!-- Á¦¸ñ Ãß°¡ -->
+    <div class="title">ë§ˆì´íŽ˜ì´ì§€</div> <!-- ì œëª© ì¶”ê°€ -->
 
-    <div class="main-container"> <!-- ¸®½ºÆ®¿Í ÄÜÅÙÃ÷¸¦ °¨½Î´Â ÄÁÅ×ÀÌ³Ê -->
+    <div class="main-container"> <!-- ë¦¬ìŠ¤íŠ¸ì™€ ì½˜í…ì¸ ë¥¼ ê°ì‹¸ëŠ” ì»¨í…Œì´ë„ˆ -->
         <div class="list">
-            <div class="active">¸¶ÀÌÆäÀÌÁö</div>
-            <div>È¸¿øÁ¤º¸º¯°æ</div>
-            <div>ºñ¹Ð¹øÈ£ º¯°æ</div>
-            <div>¼ö°­½ÅÃ»ÇöÈ²</div>
-            <div>³ªÀÇ °­ÀÇ½Ç</div>
-            <div>³»°¡ µî·ÏÇÑ ±Û</div>
-            <div>È¸¿øÅ»Åð</div>
+            <div class="active">ë§ˆì´íŽ˜ì´ì§€</div>
+            <div><a href="/jh/pwChk" class="link-style">íšŒì›ì •ë³´ë³€ê²½</a></div>
+            <div><a href="/jh/myClassroom" class="link-style">ë¹„ë°€ë²ˆí˜¸ ë³€ê²½</a></div>
+            <div><a href="/jh/myClassroom" class="link-style">ìˆ˜ê°•ì‹ ì²­í˜„í™©</a></div>
+            <div><a href="/jh/myClassroom" class="link-style">ë‚˜ì˜ ê°•ì˜ì‹¤</a></div>
+            <div><a href="/jh/myClassroom" class="link-style">ë‚´ê°€ ë“±ë¡í•œ ê¸€</a></div>
+            <div><a href="/jh/myClassroom" class="link-style">íšŒì›íƒˆí‡´</a></div>
         </div>
 
         <div class="content">
-        	<form action="/pw_chk" method="get">
+        	<form action="/jh/pw_chk" method="get">
 	            <div class="content-box" onclick="this.closest('form').submit();">
-	        		<img src="/images/È¸¿øÁ¤º¸º¯°æ.png" alt="È¸¿øÁ¤º¸º¯°æ" class="content-image">
-	        		<p>È¸¿øÁ¤º¸º¯°æ</p>
+	        		<img src="/images/íšŒì›ì •ë³´ë³€ê²½.png" alt="íšŒì›ì •ë³´ë³€ê²½" class="content-image">
+	        		<p>íšŒì›ì •ë³´ë³€ê²½</p>
 	    		</div>
     		</form>
     		
     		<form action="/your-controller-url" method="POST">
 	            <div class="content-box" onclick="this.closest('form').submit();">
-        			<img src="/images/ºñ¹Ð¹øÈ£º¯°æ.png" alt="ºñ¹Ð¹øÈ£º¯°æ" class="content-image">
-        			<p>ºñ¹Ð¹øÈ£ º¯°æ</p>
+        			<img src="/images/ë¹„ë°€ë²ˆí˜¸ë³€ê²½.png" alt="ë¹„ë°€ë²ˆí˜¸ë³€ê²½" class="content-image">
+        			<p>ë¹„ë°€ë²ˆí˜¸ ë³€ê²½</p>
     			</div>
     		</form>
     		
-    		<form action="/your-controller-url" method="POST">
+    		<form action="/your-controller-url" method="get">
 	            <div class="content-box" onclick="this.closest('form').submit();">
-        			<img src="/images/¼ö°­½ÅÃ»ÇöÈ².png" alt="¼ö°­½ÅÃ»ÇöÈ²" class="content-image">
-        			<p>¼ö°­½ÅÃ»ÇöÈ²</p>
+        			<img src="/images/ìˆ˜ê°•ì‹ ì²­í˜„í™©.png" alt="ìˆ˜ê°•ì‹ ì²­í˜„í™©" class="content-image">
+        			<p>ìˆ˜ê°•ì‹ ì²­í˜„í™©</p>
     			</div>   
     		</form>
     		
-    		<form action="/your-controller-url" method="POST">
+    		<form action="/jh/myClassroom" method="get">
 	            <div class="content-box" onclick="this.closest('form').submit();">
-        			<img src="/images/³ªÀÇ °­ÀÇ½Ç.png" alt="³ªÀÇ °­ÀÇ½Ç" class="content-image">
-        			<p>³ªÀÇ °­ÀÇ½Ç</p>
+        			<img src="/images/ë‚˜ì˜ ê°•ì˜ì‹¤.png" alt="ë‚˜ì˜ ê°•ì˜ì‹¤" class="content-image">
+        			<p>ë‚˜ì˜ ê°•ì˜ì‹¤</p>
     			</div> 
     		</form>	
     		
     		<form action="/your-controller-url" method="POST">
 	            <div class="content-box" onclick="this.closest('form').submit();">
-        			<img src="/images/³»°¡ µî·ÏÇÑ ±Û.png" alt="³»°¡ µî·ÏÇÑ ±Û" class="content-image">
-        			<p>³»°¡ µî·ÏÇÑ ±Û</p>
+        			<img src="/images/ë‚´ê°€ ë“±ë¡í•œ ê¸€.png" alt="ë‚´ê°€ ë“±ë¡í•œ ê¸€" class="content-image">
+        			<p>ë‚´ê°€ ë“±ë¡í•œ ê¸€</p>
     			</div> 	
     		</form>	
         </div>
     </div>
 </div>
-
-<footer class="footer">
-        &copy; 2024 MyPage Corp. All rights reserved.
-</footer>
-
-
-
-
-	
 </body>
+<footer>
+	<%@ include file="../footer.jsp" %>
+</footer>
 </html>

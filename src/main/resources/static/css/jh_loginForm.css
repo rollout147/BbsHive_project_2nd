@@ -45,7 +45,7 @@
 
         .user_type_buttons {
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
             margin-bottom: 20px;
             width: 100%;
         }
@@ -57,7 +57,8 @@
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s;
-            
+            margin: 11px;
+            margin-bottom: -5px;
             
         }
 
@@ -76,17 +77,20 @@
 		  flex-direction: column; /* 입력 필드들을 수직 정렬 */
 		  justify-content: center; /* 수직 방향(세로) 가운데 정렬 */
 		  align-items: center; /* 수평 방향(가로) 가운데 정렬 */
+		  gap:10px;
 		}
+		
         input {
-            width: 50%;
+            width: 59%;
             padding: 10px;
             margin: 10px 0;
             border-radius: 5px;
             border: 1px solid #ccc;
+            margin-bottom: 50px;
         }
 
         .input_submit {
-            width: 55%;
+            width: 59%;
             background-color: #83CBEB;
             border: none;
             border-radius: 5px;
@@ -103,9 +107,10 @@
             display: flex;
             justify-content: center;
             width: calc(100% - 20px);
-            margin-top: 20px;
+            margin-top: 10px;
             padding: 0;
             list-style: none;
+            margin-left: 9px;
         }
 
         ul.sign_up_find_idpw li a {
@@ -126,11 +131,9 @@
             display: flex;
             justify-content: center;
             align-items: center; /* 수직 정렬을 위해 추가 */
-            width: 100%;
+            width: 201vh;
             height: 100%; /* 높이를 100%로 설정하여 컨테이너에 맞춤 */
             position: absolute; /* 로그인 컨테이너의 아래에 위치하도록 설정 */
-            top: 0; /* 상단 맞춤 */
-            left: 0; /* 좌측 맞춤 */
             overflow: hidden; /* 이미지가 컨테이너 밖으로 넘어가지 않도록 설정 */
         }
 		
@@ -143,14 +146,22 @@
         }
 		
 		.login_icon {
-		    margin-bottom: 50px;
+		    margin-bottom: 30px;
 		    display: flex;
 		    justify-content: center;
 		    align-items: center;
-		    margin-top: 10px;
+		    margin-top: 30px;
 		}
 		
 		.login_icon img {
 		    width: 80px;
-		    height: 80px;
+		    height: 80px;	
 		}
+		
+		.errMessage {
+		    height: 20px; /* 항상 공간을 차지할 높이 설정 */
+		    color: red;
+		    text-align: center;
+		}
+
+
